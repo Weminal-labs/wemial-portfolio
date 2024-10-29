@@ -1,0 +1,120 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["**/*.{js,jsx,ts,tsx,cjs}"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["./tsconfig.json", "tsconfig.eslint.json"]
+      },
+      "extends": [
+        "next/core-web-vitals",
+        "prettier",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:react/jsx-runtime",
+        "plugin:prettier/recommended",
+        "plugin:tailwindcss/recommended"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "immer",
+        "simple-import-sort",
+        "import",
+        "readable-tailwind"
+      ],
+      "rules": {
+        "tailwindcss/no-custom-classname": 0,
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "tailwindcss/classnames-order": 0,
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          {
+            "fixStyle": "inline-type-imports"
+          }
+        ],
+        "semi": 0,
+        "curly": ["error", "multi-line"],
+        "prettier/prettier": 0,
+        "no-param-reassign": [
+          "error",
+          {
+            "props": true,
+            "ignorePropertyModificationsForRegex": ["^draft", "state"]
+          }
+        ],
+        "@typescript-eslint/no-unsafe-assignment": 0,
+        "@typescript-eslint/no-unsafe-member-access": 0,
+        "@typescript-eslint/no-unsafe-call": 0,
+        "@typescript-eslint/no-unsafe-return": 0,
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "react/jsx-wrap-multilines": [
+          "error",
+          {
+            "prop": "ignore"
+          }
+        ],
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/interactive-supports-focus": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/state-in-constructor": ["error", "never"],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": [
+              "arrow-function",
+              "function-declaration",
+              "function-expression"
+            ],
+            "unnamedComponents": "arrow-function"
+          }
+        ],
+        "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "immer/no-update-map": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "import/extensions": ["error", "never"],
+        "@typescript-eslint/no-misused-promises": [
+          2,
+          {
+            "checksVoidReturn": {
+              "attributes": false
+            }
+          }
+        ],
+        "readable-tailwind/multiline": [
+          "warn",
+          {
+            "callees": ["tw", "twMerge", "cva", "cn", "clsx"],
+            "printWidth": 80
+          }
+        ],
+        "readable-tailwind/no-unnecessary-whitespace": [
+          "error",
+          {
+            "callees": ["tw", "twMerge", "cva", "cn", "clsx"]
+          }
+        ],
+        "readable-tailwind/sort-classes": [
+          "error",
+          {
+            "callees": ["tw", "twMerge", "cva", "cn", "clsx"]
+          }
+        ],
+        "readable-tailwind/no-duplicate-classes": [
+          "error",
+          {
+            "callees": ["tw", "twMerge", "cva", "cn", "clsx"]
+          }
+        ]
+      }
+    }
+  ]
+}
