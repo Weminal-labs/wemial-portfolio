@@ -13,7 +13,11 @@ const config: Config = {
         center: true,
       },
       fontFamily: {
-        poppins: ['var(--font-poppins)', 'sans-serif'],
+        'bebas-neue': ['var(--font-bebas-neue)', 'sans-serif'],
+        'pp-neue-montreal': ['var(--font-pp-neue-montreal)', 'sans-serif'],
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/images/cloud.png')",
       },
       colors: {
         background: 'hsl(var(--background))',
