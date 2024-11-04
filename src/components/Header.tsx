@@ -91,10 +91,18 @@ const Header = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0]
-        setActiveClass(entry.target.id as SECTION_IDS)
+        const visibleEntries = entries.filter(entry => entry.isIntersecting)
+        if (visibleEntries.length > 0) {
+          const mostVisible = visibleEntries.reduce((prev, current) => {
+            return prev.intersectionRatio > current.intersectionRatio ? prev : current
+          })
+          setActiveClass(mostVisible.target.id as SECTION_IDS)
+        }
       },
-      { threshold: 0.7 },
+      {
+        threshold: [0.2, 0.4, 0.6, 0.8],
+        rootMargin: '-100px 0px -100px 0px'
+      }
     )
 
     const elements = headerItems.map((item) => {
@@ -149,7 +157,7 @@ const Header = () => {
                 )}
                 onClick={() => handleScrollToSection(item.path)}
               >
-                <span className={clsx(
+                {/* <span className={clsx(
                   "transition-colors",
                   {
                     'text-primary': activeClass === item.path,
@@ -157,8 +165,8 @@ const Header = () => {
                   }
                 )}>
                   {item.icon}
-                </span>
-                <span>{item.title}</span>
+                </span> */}
+                <span className='text-base font-bold'>{item.title}</span>
                 {activeClass === item.path && (
                   <motion.div
                     layoutId="underline"
