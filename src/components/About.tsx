@@ -3,12 +3,12 @@ import { SECTION_IDS } from '@/constants'
 const About = () => {
   return (
     <div className="grid h-screen grid-cols-3" id={SECTION_IDS.WHO_WE_ARE}>
-      <div className="h-full">
+      <div className="h-full hidden md:block col-span-1">
         <div className="my-20 border-b"></div>
       </div>
-      <div className="flex h-full items-center justify-center border-x py-20">
+      <div className="flex h-full items-center justify-center border-x py-20 col-span-3 md:col-span-1">
         <div
-          className={`flex h-full items-center justify-center px-20 text-center`}
+          className={`flex h-full w-full items-center justify-center px-10 md:px-20 text-center`}
         >
           <div>
             <h2 className="font-bebas-neue text-8xl text-muted-foreground">
@@ -23,7 +23,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="h-full">
+      <div className="h-full hidden md:block col-span-1">
         <div className="my-20 border-b"></div>
       </div>
     </div>
