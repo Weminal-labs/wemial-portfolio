@@ -171,7 +171,7 @@
     ]
   },
   {
-    "name": "Tu Nhat Phuong (Nathaniel)",
+    "name": "Le Khac Thanh Tung",
     "bio": "A versatile Fullstack Developer skilled in Front-end, Back-end, and Smart Contract development, currently contributing to Walnet, a depin project in the web3 space. Walnet provides a PC-like interface accessible via the web to enable sharing of CPU/GPU resources for high-demand tasks like model training and graphic processing. Additionally, as a Cloud Engineer, I am experienced with DevOps tools, including CI/CD pipelines (GitLab, GitHub, AWS CodePipeline) and infrastructure automation with Terraform on AWS. My goal is to integrate full-stack development and cloud engineering expertise to deliver scalable, secure, and innovative solutions in web3 and cloud computing.",
     "techstack": [
       "ReactJS, Redux, NextJS, NodeJS, ExpressJS, Python, MongoDB, PostgreSQL, Rust, GitLab CI/CD, GitHub Actions, AWS, Terraform, Docker, Kubernetes, Karpenter"
