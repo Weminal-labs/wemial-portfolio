@@ -1,13 +1,22 @@
 'use client'
 import clsx from 'clsx'
-import { Menu, X, Users, Eye, Award, Gift, Folder, UserCircle } from 'lucide-react'
+import {
+  Menu,
+  X,
+  Users,
+  Eye,
+  Award,
+  Gift,
+  Folder,
+  UserCircle,
+} from 'lucide-react'
 import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
   FaTelegram,
-  FaFacebook
-} from "react-icons/fa";
+  FaFacebook,
+} from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
@@ -30,11 +39,6 @@ const headerItems = [
     title: 'Awards',
     path: SECTION_IDS.AWARDS,
     icon: <Award className="h-5 w-5" />,
-  },
-  {
-    title: 'Prize',
-    path: SECTION_IDS.PRIZE,
-    icon: <Gift className="h-5 w-5" />,
   },
   {
     title: 'Projects',
@@ -91,18 +95,20 @@ const Header = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleEntries = entries.filter(entry => entry.isIntersecting)
+        const visibleEntries = entries.filter((entry) => entry.isIntersecting)
         if (visibleEntries.length > 0) {
           const mostVisible = visibleEntries.reduce((prev, current) => {
-            return prev.intersectionRatio > current.intersectionRatio ? prev : current
+            return prev.intersectionRatio > current.intersectionRatio ?
+                prev
+              : current
           })
           setActiveClass(mostVisible.target.id as SECTION_IDS)
         }
       },
       {
         threshold: [0.2, 0.4, 0.6, 0.8],
-        rootMargin: '-100px 0px -100px 0px'
-      }
+        rootMargin: '-100px 0px -100px 0px',
+      },
     )
 
     const elements = headerItems.map((item) => {
@@ -139,7 +145,7 @@ const Header = () => {
           bg-gradient-to-b from-background/20 via-background/5 to-transparent
           backdrop-blur-sm py-4 transition-all duration-300`,
           {
-            'bg-background/20 backdrop-blur-md shadow-lg': isActiveScroll
+            'bg-background/20 backdrop-blur-md shadow-lg': isActiveScroll,
           },
         )}
       >
@@ -149,11 +155,11 @@ const Header = () => {
               <button
                 key={item.title}
                 className={clsx(
-                  "uppercase relative py-2 transition-colors flex items-center gap-2",
+                  'uppercase relative py-2 transition-colors flex items-center gap-2',
                   {
                     'text-primary': activeClass === item.path,
-                    'hover:text-primary/70': activeClass !== item.path
-                  }
+                    'hover:text-primary/70': activeClass !== item.path,
+                  },
                 )}
                 onClick={() => handleScrollToSection(item.path)}
               >
@@ -166,7 +172,7 @@ const Header = () => {
                 )}>
                   {item.icon}
                 </span> */}
-                <span className='text-base font-bold'>{item.title}</span>
+                <span className="text-base font-bold">{item.title}</span>
                 {activeClass === item.path && (
                   <motion.div
                     layoutId="underline"
@@ -179,7 +185,6 @@ const Header = () => {
             <div className="hidden md:flex items-center gap-2">
               <ToggleTheme />
             </div>
-
           </div>
 
           <button
@@ -233,24 +238,25 @@ const Header = () => {
                     <button
                       key={item.title}
                       className={clsx(
-                        "text-left py-3 px-4 rounded-lg transition-all duration-200 flex items-center gap-3",
+                        'text-left py-3 px-4 rounded-lg transition-all duration-200 flex items-center gap-3',
                         {
-                          'bg-primary/10 text-primary font-medium': activeClass === item.path,
-                          'hover:bg-accent hover:translate-x-1': activeClass !== item.path
-                        }
+                          'bg-primary/10 text-primary font-medium':
+                            activeClass === item.path,
+                          'hover:bg-accent hover:translate-x-1':
+                            activeClass !== item.path,
+                        },
                       )}
                       onClick={() => {
                         handleScrollToSection(item.path)
                         setIsMobileMenuOpen(false)
                       }}
                     >
-                      <span className={clsx(
-                        "transition-colors",
-                        {
+                      <span
+                        className={clsx('transition-colors', {
                           'text-primary': activeClass === item.path,
-                          'text-muted-foreground': activeClass !== item.path
-                        }
-                      )}>
+                          'text-muted-foreground': activeClass !== item.path,
+                        })}
+                      >
                         {item.icon}
                       </span>
                       <span className="flex-1">{item.title}</span>

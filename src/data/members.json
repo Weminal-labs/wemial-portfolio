@@ -1,0 +1,228 @@
+[
+  {
+    "name": "Luong Van Phap",
+    "bio": " As a Blockchain Developer with a strong passion for technology and a focus on Web3 solutions, I have built a solid foundation in developing and deploying blockchain applications. Through various projects, I have gained experience, such as creating an educational game on blockchain, where I successfully implemented features like passwordless authentication with zkLogin, developed token management mechanisms, and integrated smart contracts to ensure transparency and fairness in gameplay. Notably, my team and I earned 3rd place at the Sui Overflow and Runner-up at the 2024 Global Hackathon: Battle of Olympus 2024, showcasing our creative solutions and strong programming skills.",
+    "techstack": [
+      "Typescript",
+      "Rust",
+      "ReactJS",
+      "NodeJS",
+      "NextJS",
+      "MongoDB"
+    ]
+  },
+  {
+    "name": "Pich Tran",
+    "bio": "I am a skilled software engineer with expertise in full-stack web development and learning cloud service deployment. Passionate about Web3, DeFi, Onchain Games. I enjoy exploring new technologies and have a knack for quickly adapting to them. Nowadays, I focus mostly on blockchain development, where Rust is my go-to however I can also work with pure Typescript and AWS.\n",
+    "techstack": [
+      "Rust",
+      "Move",
+      "Solidity for smart contract",
+      ".NET",
+      "Node.js",
+      "Web3js",
+      "Bun",
+      "IPFS",
+      "Decentralize Stored",
+      "Oracle like Pyth",
+      "IndexerAPI",
+      "BigQueries",
+      "MongoDB",
+      "RESTful APIs",
+      "MySQL",
+      "MSSQL",
+      "MongoDB",
+      "and PostgreSQL",
+      "SASS / SCSS",
+      "UX Design",
+      "Storybook",
+      "Regula (Face Recognition)",
+      "Socket.io",
+      "Docker",
+      "Kubernetes"
+    ]
+  },
+  {
+    "name": "Cao Dang Tinh",
+    "bio": "Hi, my name is Dang Tinh. I'm currently a final-year student majoring in Computer Science at Ton Duc Thang University. Through my studies and work experience, I have acquired several skills related to web development, including HTML, CSS, TypeScript, Next.js, Nest.js, and other skills and libraries related to web programming",
+    "techstack": [
+      "Javascript",
+      "Typescript",
+      "NextJs",
+      "ExpressJs",
+      "NestJs",
+      "Java Spring Boot",
+      "Ubuntu",
+      "Redux",
+      "Firebase",
+      "Docker",
+      "Jenkins",
+      "Github Actions"
+    ]
+  },
+  {
+    "name": "Mai Vu Xuan Vuong",
+    "bio": "A fullstack web developer with a growing interest in Web3 technologies. I'm exploring decentralized applications, blockchain, and the next generation of the internet. Through continuous learning and hands-on projects, I'm excited to contribute to the evolving world of decentralized finance (DeFi), smart contracts, and tokenized assets.",
+    "techstack": [
+      "NextJS",
+      "ReactJS",
+      "NodeJS",
+      "MySQL",
+      "MongoDB",
+      "Express",
+      "Solidity"
+    ]
+  },
+  {
+    "name": "Pham Huynh Anh (Saitama Coder",
+    "bio": "SaitamaCoder, a blockchain dev skilled in Solidity and Rust, creates DeFi and SocialFi solutions. A Klaytn Vietnam Dev Ambassador, they build open-source projects and Soul Bound NFTs, enhancing Web3 community value.",
+    "techstack": [
+      "Solidity",
+      "Rust",
+      "TypeScript",
+      "Hardhat",
+      "Foundry",
+      "Truffle",
+      "Anchor (for Solana)",
+      "Alloy",
+      "Ethereum",
+      "Solana",
+      "Klaytn",
+      "Avalanche",
+      "Algorand",
+      "Kaia",
+      "ReactJS",
+      "Ethers.js",
+      "IPFS",
+      "AWS Lambda",
+      "Firebase",
+      "Chai",
+      "Mocha",
+      "Jest",
+      "Google Cloud",
+      "AWS",
+      "Azure",
+      "React Native",
+      "Kotlin",
+      "Flutter"
+    ]
+  },
+  {
+    "name": "Vu Chau Anh Tuan (Kay)",
+    "bio": "",
+    "techstack": [
+      "Go",
+      "Rust",
+      "Javascript",
+      "Python",
+      "ReactJS",
+      "Pytorch"
+    ]
+  },
+  {
+    "name": "Vo Nguyen Phu Qui",
+    "bio": "I am  a senior student at Ton Duc Thang University, specializing in Computer Network and Data Communication. With 2 years in frontend development and 1 year in blockchain, I have a robust technical skill set, including proficiency in JavaScript, TypeScript, Rust, and frameworks like React.js and Next.js. My experience spans various blockchain platforms such as Near Protocol, Sui Move, and Aptos, and he is well-versed in Agile development and the Scrum framework.\n\nI have achieved notable success in multiple hackathons, including the University and Community Awards at the Sui Overflow Hackathon and a top position at the TDTU-VBI Blockchain Hackathon. His portfolio includes innovative projects like Wecastle, an on-chain game on the Sui network, and Wedata, a decentralized platform for data storage and trading. Driven by a passion for blockchain and web3 technologies, I am always eager to contribute to cutting-edge projects in the tech space.",
+    "techstack": [
+      "Typescript",
+      "Rust",
+      "ReactJS",
+      "Nextjs",
+      "ASP.NET",
+      "Axum",
+      "Near protocol",
+      "Sui Network",
+      "Aptos Network"
+    ]
+  },
+  {
+    "name": "Nguyen Anh Tuan (Tuna)",
+    "bio": "Hi there, my name is Tuan. I'm a fullstack developer that I've worked in many projects before I went further to many new lands such as cloud, blockchain, system, networking and so on. Currently, I'm working in cloud computing and I have a curiosity of blockchain and web3 worlds within some projects.",
+    "techstack": [
+      "Javascript",
+      "Typescript",
+      "C++",
+      "C#",
+      "Python",
+      "ReactJS",
+      "NodeJS",
+      "MySQL",
+      "MongoDB",
+      "AWS",
+      "Terraform"
+    ]
+  },
+  {
+    "name": "Phan Hoang Vinh Hien (Harry)",
+    "bio": "From small beginnings, but always aiming towards the bright light of tomorrow, hoping to shine brightly. \n\nI've liked this phrase since I started participating in hackathons. Because being young allows me to have a lot of time to learn new things, get to know new teammates. If I was afraid to venture out back then. Maybe I would still be stuck with thoughts of what to do next in IT?",
+    "techstack": [
+      "User cursor"
+    ]
+  },
+  {
+    "name": "Le Khac Thanh Tung",
+    "bio": "\"Technology should feel like a bridge, not a barrier.\" Inspired by this, I want to create a \"bridge\" that helps everyone transition smoothly from Web2 to Web3. For developers, I’m focused on building onboarding tools that simplify the Web3 learning curve. For everyday users, my goal is to create dApps that feel as intuitive as Web2 apps, yet unlock the unique benefits of Web3. By building this bridge, my goal is to make Web3 a space where everyone can explore, create, and thrive.",
+    "techstack": [
+      "ReactJS",
+      "NodeJS",
+      "MySQL",
+      "MongoDB",
+      "AWS",
+      "Docker"
+    ]
+  },
+  {
+    "name": "Tu Nhat Phuong (Nathaniel)",
+    "bio": "A versatile Fullstack Developer skilled in Front-end, Back-end, and Smart Contract development, currently contributing to Walnet, a depin project in the web3 space. Walnet provides a PC-like interface accessible via the web to enable sharing of CPU/GPU resources for high-demand tasks like model training and graphic processing. Additionally, as a Cloud Engineer, I am experienced with DevOps tools, including CI/CD pipelines (GitLab, GitHub, AWS CodePipeline) and infrastructure automation with Terraform on AWS. My goal is to integrate full-stack development and cloud engineering expertise to deliver scalable, secure, and innovative solutions in web3 and cloud computing.",
+    "techstack": [
+      "ReactJS, Redux, NextJS, NodeJS, ExpressJS, Python, MongoDB, PostgreSQL, Rust, GitLab CI/CD, GitHub Actions, AWS, Terraform, Docker, Kubernetes, Karpenter"
+    ]
+  },
+  {
+    "name": "Lam Thanh Phuc",
+    "bio": "I'm a back-end web developer specializing in Node.js and TypeScript, currently expanding my skillset by learning blockchain development with Rust and the Move language. I'm excited about the present and future potential of blockchain technology.",
+    "techstack": [
+      "Rust",
+      "Nodejs",
+      "C#",
+      ".NET (Core)",
+      "Docker",
+      "Ink!",
+      "AWS(EC2)",
+      "MongoDB",
+      "MySQL",
+      "PostgressSQL",
+      "DynamoDB",
+      "Restfull APIs",
+      "Javascript"
+    ]
+  },
+  {
+    "name": "Le Khac Thanh Tung",
+    "bio": "\"Technology should feel like a bridge, not a barrier.\" Inspired by this, I want to create a \"bridge\" that helps everyone transition smoothly from Web2 to Web3. For developers, I’m focused on building onboarding tools that simplify the Web3 learning curve. For everyday users, my goal is to create dApps that feel as intuitive as Web2 apps, yet unlock the unique benefits of Web3. By building this bridge, my goal is to make Web3 a space where everyone can explore, create, and thrive.",
+    "techstack": [
+      "ReactJS",
+      "NodeJS",
+      "MySQL",
+      "MongoDB",
+      "AWS",
+      "Docker"
+    ]
+  },
+  {
+    "name": "Tu Nhat Phuong (FromSunNews)",
+    "bio": "A versatile Fullstack Developer skilled in Front-end, Back-end, and Smart Contract development, currently contributing to Walnet, a depin project in the web3 space. Walnet provides a PC-like interface accessible via the web to enable sharing of CPU/GPU resources for high-demand tasks like model training and graphic processing. Additionally, as a Cloud Engineer, I am experienced with DevOps tools, including CI/CD pipelines (GitLab, GitHub, AWS CodePipeline) and infrastructure automation with Terraform on AWS. My goal is to integrate full-stack development and cloud engineering expertise to deliver scalable, secure, and innovative solutions in web3 and cloud computing.",
+    "techstack": [
+      "ReactJS, Redux, NextJS, NodeJS, ExpressJS, Python, MongoDB, PostgreSQL, Rust, GitLab CI/CD, GitHub Actions, AWS, Terraform, Docker, Kubernetes, Karpenter"
+    ]
+  },
+  {
+    "name": "Hoang Phu Loc (Loc Hoang)",
+    "bio": "I'm a full-stack developer with a strong curiosity about blockchain and web3 technologies. My journey so far has covered traditional web development, and now I'm eager to dive deeper into the decentralized world. My goal is to understand the core concepts behind blockchain, smart contracts, and decentralized applications.",
+    "techstack": [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "NestJS"
+    ]
+  }
+]

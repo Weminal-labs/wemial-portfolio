@@ -9,7 +9,7 @@ import {
 } from 'react-icons/si'
 import { TbInfinity } from 'react-icons/tb'
 
-export default function MemberPortfolio() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-white dark:bg-black relative">
       {/* Divider Lines - Ẩn trên mobile */}
@@ -64,8 +64,8 @@ export default function MemberPortfolio() {
 
             {/* Title and Description */}
             <div className="text-left space-y-12 md:space-y-10">
-              <h1 className="text-3xl md:text-5xl mt-4 font-bold font-bebas-neue leading-tight scale-y-150 md:tracking-[-2px] text-neutral-800 dark:text-white">
-                HI, I'M [MEMBER'S NAME]
+              <h1 className="text-3xl md:text-5xl mt-4 font-bold leading-tight scale-y-150 md:tracking-[-2px] text-neutral-800 dark:text-white">
+                HI, I'M MEMBER'S NAME
               </h1>
 
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg md:text-base text-justify md:text-left">
@@ -95,7 +95,7 @@ export default function MemberPortfolio() {
             </div>
 
             {/* Developer Title */}
-            <h1 className="text-3xl md:text-5xl my-[120%] md:my-0 md:mt-4 font-bold font-bebas-neue leading-tight scale-y-150 tracking-[-2px] md:tracking-[-3px] text-neutral-800 dark:text-white text-right order-1 md:order-2">
+            <h1 className="text-3xl md:text-5xl my-[120%] md:my-0 md:mt-4 font-bold leading-tight scale-y-150 tracking-[-2px] md:tracking-[-3px] text-neutral-800 dark:text-white text-right order-1 md:order-2">
               I'M A FULL STACK <br />
               DEVELOPER
             </h1>

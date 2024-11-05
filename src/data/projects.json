@@ -1,0 +1,331 @@
+[
+  {
+    "name": "WeCastle",
+    "description": "The fully on-chain roguelite RPG set Game on the Aptos blockchain . Building a Roguelite RPG Game on Telegram Mini App. Players dive into a challenging world of dungeons filled with fierce monsters and hidden treasures, with all gas fees sponsored for a seamless and immersive gameplay experience",
+    "features": [
+      "Web3 Game",
+      "Gas Station",
+      "Keyless Account"
+    ],
+    "members": [
+      {
+        "name": "Nguyen Nang Hoang Truc",
+        "role": "Game Developer"
+      },
+      {
+        "name": "Hoang Van Tien",
+        "role": "Game Developer"
+      },
+      {
+        "name": "Tran Van Hai",
+        "role": "Smart Contract Developer"
+      },
+      {
+        "name": "Long Vu",
+        "role": "Frontend Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "NodeJS",
+      "Move",
+      "Unity",
+      "Aptos Keyless",
+      "Aptos Shinami"
+    ],
+    "leaders": [
+      {
+        "name": "Luong Van Phap",
+        "role": "Frontend Developer"
+      }
+    ],
+    "awards": []
+  },
+  {
+    "name": "KongBall",
+    "description": "In simple terms, in the KongBall game, you can experience the current complete game process by following these steps:\n\nLogin by Razor Wallet\nOpen the vault and bet the specific amount to create a room\nYou can earn from the bot randomnress or Invite your friend by user address\nPlay the game\nBased on your strategy, make decision to win and receive the rewards",
+    "features": [
+      "GameFi"
+    ],
+    "members": [
+      {
+        "name": "Hoang Phuc Loc",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Hoang Van Tien",
+        "role": "Game Developer"
+      },
+      {
+        "name": "Pich Tran",
+        "role": "SmartContract Developer"
+      },
+      {
+        "name": "Long Vu",
+        "role": "Frontend Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "Unity",
+      "Movement",
+      "Razor"
+    ],
+    "leaders": [
+      {
+        "name": "Luong Van Phap",
+        "role": "Blockchain Developer"
+      }
+    ],
+    "awards": [
+      "Runner Ups - Battle of Olympus Hackathon"
+    ]
+  },
+  {
+    "name": "Social Move",
+    "description": "A product that brings user experiences when using web3 dApp of Movement on X.",
+    "features": [
+      "Interact with dApp on social network X"
+    ],
+    "members": [
+      {
+        "name": "Vu Xuan Vuong",
+        "role": "Co-Founder"
+      },
+      {
+        "name": "Vu Chau Anh Tuan",
+        "role": "Co-Founder"
+      }
+    ],
+    "techstack": [
+      "React",
+      "NodeJS",
+      "Move",
+      "AWS"
+    ],
+    "leaders": [
+      {
+        "name": "Pham Huynh Anh",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Top 3 Local (20k$)",
+      "Top 2 Global (25k$)"
+    ]
+  },
+  {
+    "name": "ActionX",
+    "description": "Bringing a great experience when combining dApp and social by bringing the dApp to social network X, in addition to creating an AI chat bot to help web2 users easily access products on the ecosystem Aptos",
+    "features": [
+      "Interact with dApp on social network X",
+      "Interact with dApps on AI chat bots"
+    ],
+    "members": [
+      {
+        "name": "Vu Xuan Vuong",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Vu Chau Anh Tuan",
+        "role": "Backend Developer"
+      },
+      {
+        "name": "Phan Hoang Vinh Hien",
+        "role": "Community Manager"
+      }
+    ],
+    "techstack": [
+      "React",
+      "NodeJS",
+      "Move",
+      "AWS"
+    ],
+    "leaders": [
+      {
+        "name": "Pham Huynh Anh",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Top 3 track Unexpected of Aptos",
+      "Top 16 Global Hackathon"
+    ]
+  },
+  {
+    "name": "Wedata",
+    "description": "Wedata is a decentralized storage and data marketplace platform for researchers and data enthusiasts. It uses web3storage to securely and efficiently store large datasets, fostering collaborative workspaces for knowledge-sharing and data access. Wedata also features an AI Launcher, where AI developers and researchers from the web3 community connect, share ideas, and innovate in a decentralized environment.",
+    "features": [
+      "Large data storage",
+      "Sharing Data",
+      "Data Market Place"
+    ],
+    "members": [
+      {
+        "name": "Tran Van Hai",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Vo Nguyen Phu Qui",
+        "role": "Blockchain Developer"
+      },
+      {
+        "name": "Nguyen Du Thanh Long",
+        "role": "Designer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "NodeJS",
+      "Rust",
+      "Near",
+      "Near IPFS"
+    ],
+    "leaders": [
+      {
+        "name": "Phan Hoang Vinh Hien",
+        "role": "Fullstack Developer"
+      }
+    ],
+    "awards": [
+      "3rd Native track at Web3Hackfest"
+    ]
+  },
+  {
+    "name": "Wave Wallet",
+    "description": "Water Wallet is a user-friendly browser extension built on Algorand, designed to simplify crypto asset management. By offering Google login for seamless account creation and access, it removes the need for traditional seed phrase storage, making crypto more accessible for beginners and experts alike.",
+    "features": [
+      "Wallet Browser Extension",
+      "OAuth Credential"
+    ],
+    "members": [
+      {
+        "name": "Hoang Phu Loc",
+        "role": "Frontend Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "Algorand"
+    ],
+    "leaders": [
+      {
+        "name": "Le Khac Thanh Tung",
+        "role": "Fullstack Developer"
+      },
+      {
+        "name": "Phan Hoang Vinh Hien",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Top 3 Algorand Vietnam Hackathon"
+    ]
+  },
+  {
+    "name": "AlgoIDE",
+    "description": "AlgoIDE is a cloud-based IDE that simplifies smart contract development on Algorand. It supports multiple languages like PyTeal, JavaScript and Python, offers real-time collaboration among developers, and integrates AI assistance for coding. Accessible from any device, it allows direct deployment to Algorand's network, aiming to streamline smart contract creation and enhance collaborative development",
+    "features": [
+      "Cloud IDE",
+      "Realtime collaboration",
+      "AI assistance"
+    ],
+    "members": [
+      {
+        "name": "Le Khac Thanh Tung",
+        "role": "Fullstack Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "NodeJS",
+      "AWS",
+      "Docker",
+      "Algorand",
+      "Pera Wallet"
+    ],
+    "leaders": [
+      {
+        "name": "Phan Hoang Vinh Hien",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Top 1 Algorand Hackathon Vietnam - Track Infrastructure & Tooling"
+    ]
+  },
+  {
+    "name": "Sui Simulator",
+    "description": "To strengthen the Sui developer community, Weminal team has developed Sui Simulator — an open-source VSCode Extension that simplifies Sui smart contract development by providing quick tools and ready-to-use testing and development environments, thus reducing overall development time. Serving as a central hub, it enables builders to write code, set up environments, manage coins, build, test, and publish Sui contracts, perform simulations (Programmable Transaction Blocks), explore packages, and visualize dynamic object graphs.",
+    "features": [
+      "VsCode Extension"
+    ],
+    "members": [
+      {
+        "name": "Le Khac Thanh Tung",
+        "role": "Fullstack Developer"
+      },
+      {
+        "name": "Luong Van Phap",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Hoang Phu Loc",
+        "role": "Frontend Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "Move",
+      "Sui",
+      "Sui Typescript SDK",
+      "Sui CLI"
+    ],
+    "leader": [
+      {
+        "name": "Phan Hoang Vinh Hien",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Third Place Sui Overflow hackathon - Track Advanced Move Features",
+      "University Award Sui Overflow hackathon",
+      "Community Favorite Award Sui Overflow hackathon",
+      "Ecosystem Bounty Prize - AngelHack - Sui Overflow hackathon",
+      "Top 5 Sui Vietnam hackathon"
+    ]
+  },
+  {
+    "name": "Mulink",
+    "description": "A project built to optimize dapps on X social using X cards",
+    "features": [
+      "Use the url to mint NFT on X social itself"
+    ],
+    "members": [
+      {
+        "name": "Vu Xuan Vuong",
+        "role": "Frontend Developer"
+      },
+      {
+        "name": "Vu Chau Anh Tuan",
+        "role": "Backend Developer"
+      }
+    ],
+    "techstack": [
+      "React",
+      "Move",
+      "Sui",
+      "Sui Typescript SDK",
+      "Sui CLI"
+    ],
+    "leader": [
+      {
+        "name": "Pham Huynh Anh",
+        "role": "Project Manager"
+      }
+    ],
+    "awards": [
+      "Champion at Polkadot Hackathon VietNam 2024 - Track Unique Network"
+    ]
+  }
+]

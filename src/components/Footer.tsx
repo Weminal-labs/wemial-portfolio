@@ -23,11 +23,6 @@ const footerItems = [
     icon: <Award className="h-5 w-5" />,
   },
   {
-    title: 'Prize',
-    path: SECTION_IDS.PRIZE,
-    icon: <Gift className="h-5 w-5" />,
-  },
-  {
     title: 'Projects',
     path: SECTION_IDS.PROJECTS,
     icon: <Folder className="h-5 w-5" />,
@@ -95,7 +90,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
           {footerItems.map((item) => (
             <div key={item.title} className="flex flex-col items-center">
               <button
@@ -134,10 +129,16 @@ const Footer = () => {
               © {new Date().getFullYear()} Weminal, Inc. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="#"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="#"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Terms of Service
               </Link>
             </div>

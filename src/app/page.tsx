@@ -20,7 +20,6 @@ export default function Home() {
       <Awards />
       <Projects />
       <Members />
-      {/* <MemberPortfolio /> */}
       <Footer />
     </div>
   )
