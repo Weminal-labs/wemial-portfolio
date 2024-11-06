@@ -1,25 +1,25 @@
 'use client'
 import clsx from 'clsx'
+import { AnimatePresence,motion } from 'framer-motion'
 import {
-  Menu,
-  X,
-  Users,
-  Eye,
   Award,
-  Gift,
+  Eye,
   Folder,
+  Gift,
+  Menu,
   UserCircle,
+  Users,
+  X,
 } from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import {
+  FaFacebook,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaTelegram,
-  FaFacebook,
+  FaTwitter,
 } from 'react-icons/fa'
-import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 
 import ToggleTheme from '@/components/ToggleTheme'
 import { SECTION_IDS } from '@/constants'
@@ -28,49 +28,49 @@ const headerItems = [
   {
     title: 'Who we are',
     path: SECTION_IDS.WHO_WE_ARE,
-    icon: <Users className="h-5 w-5" />,
+    icon: <Users className="size-5" />,
   },
   {
     title: 'Vision',
     path: SECTION_IDS.VISION,
-    icon: <Eye className="h-5 w-5" />,
+    icon: <Eye className="size-5" />,
   },
   {
     title: 'Awards',
     path: SECTION_IDS.AWARDS,
-    icon: <Award className="h-5 w-5" />,
+    icon: <Award className="size-5" />,
   },
   {
     title: 'Projects',
     path: SECTION_IDS.PROJECTS,
-    icon: <Folder className="h-5 w-5" />,
+    icon: <Folder className="size-5" />,
   },
   {
     title: 'Our team',
     path: SECTION_IDS.OUR_TEAM,
-    icon: <UserCircle className="h-5 w-5" />,
+    icon: <UserCircle className="size-5" />,
   },
 ]
 
 const socialLinks = [
   {
     name: 'Twitter',
-    icon: <FaTwitter className="h-5 w-5" />,
+    icon: <FaTwitter className="size-5" />,
     href: 'https://twitter.com',
   },
   {
     name: 'Github',
-    icon: <FaGithub className="h-5 w-5" />,
+    icon: <FaGithub className="size-5" />,
     href: 'https://github.com',
   },
   {
     name: 'LinkedIn',
-    icon: <FaLinkedin className="h-5 w-5" />,
+    icon: <FaLinkedin className="size-5" />,
     href: 'https://linkedin.com',
   },
   {
     name: 'Facebook',
-    icon: <FaFacebook className="h-5 w-5" />,
+    icon: <FaFacebook className="size-5" />,
     href: 'https://facebook.com',
   },
 ]
@@ -141,21 +141,30 @@ const Header = () => {
     <>
       <div
         className={clsx(
-          `fixed left-0 top-0 z-50 w-full 
-          bg-gradient-to-b from-background/20 via-background/5 to-transparent
-          backdrop-blur-sm py-4 transition-all duration-300`,
+          `
+            fixed left-0 top-0 z-50 w-full bg-gradient-to-b from-background/20
+            via-background/5 to-transparent py-4 backdrop-blur-sm transition-all
+            duration-300
+          `,
           {
             'bg-background/20 backdrop-blur-md shadow-lg': isActiveScroll,
           },
         )}
       >
         <nav className="container flex items-center justify-between font-medium">
-          <div className="hidden md:flex items-center gap-8 flex-1 justify-between">
+          <div className={`
+            hidden flex-1 items-center justify-between gap-8
+
+            md:flex
+          `}>
             {headerItems.map((item) => (
               <button
                 key={item.title}
                 className={clsx(
-                  'uppercase relative py-2 transition-colors flex items-center gap-2',
+                  `
+                    relative flex items-center gap-2 py-2 uppercase
+                    transition-colors
+                  `,
                   {
                     'text-primary': activeClass === item.path,
                     'hover:text-primary/70': activeClass !== item.path,
@@ -176,22 +185,30 @@ const Header = () => {
                 {activeClass === item.path && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 h-0.5 bg-primary bottom-0"
+                    className="absolute inset-x-0 bottom-0 h-0.5 bg-primary"
                   />
                 )}
               </button>
             ))}
 
-            <div className="hidden md:flex items-center gap-2">
+            <div className={`
+              hidden items-center gap-2
+
+              md:flex
+            `}>
               <ToggleTheme />
             </div>
           </div>
 
           <button
-            className="md:hidden p-2"
+            className={`
+              p-2
+
+              md:hidden
+            `}
             onClick={() => setIsMobileMenuOpen(true)}
           >
-            <Menu className="h-6 w-6" />
+            <Menu className="size-6" />
           </button>
         </nav>
       </div>
@@ -203,7 +220,11 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 md:hidden"
+              className={`
+                fixed inset-0 z-50 bg-black/50 backdrop-blur-sm
+
+                md:hidden
+              `}
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.div
@@ -211,10 +232,18 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 20 }}
-              className="fixed right-0 top-0 bottom-0 w-[300px] bg-background/95 backdrop-blur-md border-l border-border z-50 md:hidden"
+              className={`
+                fixed inset-y-0 right-0 z-50 w-[300px] border-l border-border
+                bg-background/95 backdrop-blur-md
+
+                md:hidden
+              `}
             >
-              <div className="flex flex-col p-6 h-full">
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-border">
+              <div className="flex h-full flex-col p-6">
+                <div className={`
+                  mb-8 flex items-center justify-between border-b border-border
+                  pb-4
+                `}>
                   <div className="flex items-center gap-2">
                     <Image
                       src="/logo/logo.png"
@@ -226,10 +255,14 @@ const Header = () => {
                     <h2 className="text-xl font-semibold">Weminal</h2>
                   </div>
                   <button
-                    className="p-2 hover:bg-accent rounded-full transition-colors"
+                    className={`
+                      rounded-full p-2 transition-colors
+
+                      hover:bg-accent
+                    `}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <X className="h-5 w-5" />
+                    <X className="size-5" />
                   </button>
                 </div>
 
@@ -238,7 +271,10 @@ const Header = () => {
                     <button
                       key={item.title}
                       className={clsx(
-                        'text-left py-3 px-4 rounded-lg transition-all duration-200 flex items-center gap-3',
+                        `
+                          flex items-center gap-3 rounded-lg px-4 py-3 text-left
+                          transition-all duration-200
+                        `,
                         {
                           'bg-primary/10 text-primary font-medium':
                             activeClass === item.path,
@@ -263,14 +299,14 @@ const Header = () => {
                       {activeClass === item.path && (
                         <motion.div
                           layoutId="activeIndicator"
-                          className="w-1.5 h-1.5 rounded-full bg-primary"
+                          className="size-1.5 rounded-full bg-primary"
                         />
                       )}
                     </button>
                   ))}
                 </div>
 
-                <div className="mt-auto pt-4 border-t border-border">
+                <div className="mt-auto border-t border-border pt-4">
                   <div className="flex flex-col gap-4">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted-foreground">
@@ -286,7 +322,11 @@ const Header = () => {
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 hover:bg-accent rounded-full transition-colors"
+                          className={`
+                            rounded-full p-2 transition-colors
+
+                            hover:bg-accent
+                          `}
                           aria-label={`Visit our ${social.name}`}
                         >
                           {social.icon}
