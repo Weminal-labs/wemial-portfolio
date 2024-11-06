@@ -3,19 +3,12 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 import { Loader } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Swiper as SwiperType } from 'swiper'
 import { Autoplay } from 'swiper/modules'
-import {
-  Swiper,
-  type SwiperProps,
-  SwiperRef,
-  SwiperSlide,
-  useSwiper,
-} from 'swiper/react'
+import { Swiper, type SwiperProps, SwiperSlide } from 'swiper/react'
 
+import { Card } from '@/components/ui/focus-cards'
 import { SECTION_IDS } from '@/constants'
 import { supabase } from '@/lib/supabase/client'
 
@@ -26,20 +19,20 @@ const swiperConfig: SwiperProps = {
   loop: true,
   navigation: false,
   autoplay: {
-    delay: 1500,
+    delay: 1400,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
 
   breakpoints: {
     768: {
-      slidesPerView: 2.4,
+      slidesPerView: 2.2,
     },
     1024: {
-      slidesPerView: 3.7,
+      slidesPerView: 3.2,
     },
     1280: {
-      slidesPerView: 5.3,
+      slidesPerView: 4.8,
     },
   },
 }
@@ -60,6 +53,7 @@ export interface Member {
 const Members = () => {
   const [members, setMembers] = useState<Member[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [hovered, setHovered] = useState<number | null>(null)
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -73,7 +67,16 @@ const Members = () => {
   }, [])
 
   return (
-    <div id={SECTION_IDS.OUR_TEAM}>
+    <div
+      id={SECTION_IDS.OUR_TEAM}
+      className={`
+        my-10
+
+        lg:my-20
+
+        md:my-16
+      `}
+    >
       <h2
         className={`
           text-center font-bebas-neue text-4xl uppercase
@@ -106,34 +109,20 @@ const Members = () => {
             md:mt-8
           `}
         >
-          {members.map((m) => (
+          {members.map((m, _index) => (
             <SwiperSlide key={m.id}>
-              <Link href={`/members/${m.id}`}>
-                <div
-                  className={`
-                    relative h-80 w-full overflow-hidden rounded-lg
-
-                    md:h-96
-                  `}
-                >
-                  <Image
-                    src={
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdBWB76EZKUgHdARYa-XNyIzoiJiUiyKiFrg&s'
-                    }
-                    className="object-cover object-center"
-                    alt=""
-                    sizes="auto"
-                    fill
-                  />
-                </div>
-                <div className="my-4">
-                  <p className="font-bebas-neue text-2xl leading-none">
-                    {m.name}
-                  </p>
-                  <p className="font-pp-neue-montreal text-lg leading-none">
-                    {m.role}
-                  </p>
-                </div>
+              <Link href={`/members/${m.id}`} className="relative">
+                <Card
+                  key={m.id}
+                  card={{
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdBWB76EZKUgHdARYa-XNyIzoiJiUiyKiFrg&s',
+                    title: m.name,
+                  }}
+                  role={m.role}
+                  index={_index}
+                  hovered={hovered}
+                  setHovered={setHovered}
+                />
               </Link>
             </SwiperSlide>
           ))}
