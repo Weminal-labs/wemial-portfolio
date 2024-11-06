@@ -1,58 +1,59 @@
 'use client'
 
+import { Award, Eye, Folder, Gift, UserCircle, Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Eye, Award, Gift, Folder, UserCircle } from 'lucide-react'
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+
 import { SECTION_IDS } from '@/constants'
 
 const footerItems = [
   {
     title: 'Who we are',
     path: SECTION_IDS.WHO_WE_ARE,
-    icon: <Users className="h-5 w-5" />,
+    icon: <Users className="size-5" />,
   },
   {
     title: 'Vision',
     path: SECTION_IDS.VISION,
-    icon: <Eye className="h-5 w-5" />,
+    icon: <Eye className="size-5" />,
   },
   {
     title: 'Awards',
     path: SECTION_IDS.AWARDS,
-    icon: <Award className="h-5 w-5" />,
+    icon: <Award className="size-5" />,
   },
   {
     title: 'Projects',
     path: SECTION_IDS.PROJECTS,
-    icon: <Folder className="h-5 w-5" />,
+    icon: <Folder className="size-5" />,
   },
   {
     title: 'Our team',
     path: SECTION_IDS.OUR_TEAM,
-    icon: <UserCircle className="h-5 w-5" />,
+    icon: <UserCircle className="size-5" />,
   },
 ]
 
 const socialLinks = [
   {
     name: 'Twitter',
-    icon: <FaTwitter className="h-5 w-5" />,
+    icon: <FaTwitter className="size-5" />,
     href: 'https://twitter.com',
   },
   {
     name: 'Github',
-    icon: <FaGithub className="h-5 w-5" />,
+    icon: <FaGithub className="size-5" />,
     href: 'https://github.com',
   },
   {
     name: 'LinkedIn',
-    icon: <FaLinkedin className="h-5 w-5" />,
+    icon: <FaLinkedin className="size-5" />,
     href: 'https://linkedin.com',
   },
   {
     name: 'Facebook',
-    icon: <FaFacebook className="h-5 w-5" />,
+    icon: <FaFacebook className="size-5" />,
     href: 'https://facebook.com',
   },
 ]
@@ -70,8 +71,24 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:pb-8 md:pt-12">
+    <footer
+      className={`
+        mt-10 border-t border-border
+
+        lg:mt-16
+
+        md:m-14
+
+        xl:mt-20
+      `}
+    >
+      <div
+        className={`
+          mx-auto max-w-7xl px-6 py-12
+
+          md:pb-8 md:pt-12
+        `}
+      >
         {/* Logo & Description */}
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-2">
@@ -84,20 +101,38 @@ const Footer = () => {
             />
             <span className="text-2xl font-bold">Weminal</span>
           </div>
-          <p className="mt-4 text-center text-sm text-muted-foreground max-w-md">
+          <p className="mt-4 max-w-md text-center text-sm text-muted-foreground">
             Where Ideas begin with a Hackathon.
           </p>
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+        <div
+          className={`
+            mt-12 grid grid-cols-2 gap-8
+
+            lg:grid-cols-5
+
+            md:grid-cols-3
+          `}
+        >
           {footerItems.map((item) => (
             <div key={item.title} className="flex flex-col items-center">
               <button
                 onClick={() => handleScrollToSection(item.path)}
-                className="group flex flex-col items-center gap-2 transition-colors hover:text-primary"
+                className={`
+                  group flex flex-col items-center gap-2 transition-colors
+
+                  hover:text-primary
+                `}
               >
-                <span className="p-3 rounded-lg bg-accent group-hover:bg-primary/10 transition-colors">
+                <span
+                  className={`
+                    rounded-lg bg-accent p-3 transition-colors
+
+                    group-hover:bg-primary/10
+                  `}
+                >
                   {item.icon}
                 </span>
                 <span className="text-sm font-medium">{item.title}</span>
@@ -114,7 +149,11 @@ const Footer = () => {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full hover:bg-accent transition-colors"
+              className={`
+                rounded-full p-3 transition-colors
+
+                hover:bg-accent
+              `}
               aria-label={social.name}
             >
               {social.icon}
@@ -123,21 +162,35 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 border-t border-border pt-8">
+          <div
+            className={`
+              flex flex-col items-center justify-between gap-4
+
+              md:flex-row
+            `}
+          >
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Weminal, Inc. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link
                 href="#"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className={`
+                  text-sm text-muted-foreground
+
+                  hover:text-foreground
+                `}
               >
                 Privacy Policy
               </Link>
               <Link
                 href="#"
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className={`
+                  text-sm text-muted-foreground
+
+                  hover:text-foreground
+                `}
               >
                 Terms of Service
               </Link>

@@ -110,14 +110,7 @@
   {
     "name": "Vu Chau Anh Tuan (Kay)",
     "bio": "",
-    "techstack": [
-      "Go",
-      "Rust",
-      "Javascript",
-      "Python",
-      "ReactJS",
-      "Pytorch"
-    ]
+    "techstack": ["Go", "Rust", "Javascript", "Python", "ReactJS", "Pytorch"]
   },
   {
     "name": "Vo Nguyen Phu Qui",
@@ -154,21 +147,12 @@
   {
     "name": "Phan Hoang Vinh Hien (Harry)",
     "bio": "From small beginnings, but always aiming towards the bright light of tomorrow, hoping to shine brightly. \n\nI've liked this phrase since I started participating in hackathons. Because being young allows me to have a lot of time to learn new things, get to know new teammates. If I was afraid to venture out back then. Maybe I would still be stuck with thoughts of what to do next in IT?",
-    "techstack": [
-      "User cursor"
-    ]
+    "techstack": ["User cursor"]
   },
   {
     "name": "Le Khac Thanh Tung",
     "bio": "\"Technology should feel like a bridge, not a barrier.\" Inspired by this, I want to create a \"bridge\" that helps everyone transition smoothly from Web2 to Web3. For developers, I’m focused on building onboarding tools that simplify the Web3 learning curve. For everyday users, my goal is to create dApps that feel as intuitive as Web2 apps, yet unlock the unique benefits of Web3. By building this bridge, my goal is to make Web3 a space where everyone can explore, create, and thrive.",
-    "techstack": [
-      "ReactJS",
-      "NodeJS",
-      "MySQL",
-      "MongoDB",
-      "AWS",
-      "Docker"
-    ]
+    "techstack": ["ReactJS", "NodeJS", "MySQL", "MongoDB", "AWS", "Docker"]
   },
   {
     "name": "Tu Nhat Phuong (Nathaniel)",
@@ -199,14 +183,7 @@
   {
     "name": "Le Khac Thanh Tung",
     "bio": "\"Technology should feel like a bridge, not a barrier.\" Inspired by this, I want to create a \"bridge\" that helps everyone transition smoothly from Web2 to Web3. For developers, I’m focused on building onboarding tools that simplify the Web3 learning curve. For everyday users, my goal is to create dApps that feel as intuitive as Web2 apps, yet unlock the unique benefits of Web3. By building this bridge, my goal is to make Web3 a space where everyone can explore, create, and thrive.",
-    "techstack": [
-      "ReactJS",
-      "NodeJS",
-      "MySQL",
-      "MongoDB",
-      "AWS",
-      "Docker"
-    ]
+    "techstack": ["ReactJS", "NodeJS", "MySQL", "MongoDB", "AWS", "Docker"]
   },
   {
     "name": "Tu Nhat Phuong (FromSunNews)",
@@ -218,11 +195,6 @@
   {
     "name": "Hoang Phu Loc (Loc Hoang)",
     "bio": "I'm a full-stack developer with a strong curiosity about blockchain and web3 technologies. My journey so far has covered traditional web development, and now I'm eager to dive deeper into the decentralized world. My goal is to understand the core concepts behind blockchain, smart contracts, and decentralized applications.",
-    "techstack": [
-      "ReactJS",
-      "NodeJS",
-      "ExpressJS",
-      "NestJS"
-    ]
+    "techstack": ["ReactJS", "NodeJS", "ExpressJS", "NestJS"]
   }
 ]

@@ -3,6 +3,7 @@
 // make our codebase more readable and maintainable
 
 // Import data
+// eslint-disable-next-line import/extensions
 import weminal from '@/data/introduction.json'
 
 export function useWeminal() {
