@@ -1,222 +1,128 @@
 'use client'
 
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Image from 'next/image'
-import { useState } from 'react'
+import { Loader } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, type SwiperProps, SwiperSlide } from 'swiper/react'
 
 import { SECTION_IDS } from '@/constants'
+import { supabase } from '@/lib/supabase/client'
 
-const awards = [
-  {
-    image: '/awards/award1.png',
-    title: 'LOREM IPSUM'
-  },
-  {
-    image: '/awards/award2.png',
-    title: 'LOREM IPSUM'
-  },
-  {
-    image: '/awards/award3.png',
-    title: 'LOREM IPSUM'
-  },
-  {
-    image: '/awards/award4.png',
-    title: 'LOREM IPSUM'
+interface Award {
+  id: string
+  name: string
+  img: string
+  achievements: {
+    Project: string
+    Award: string
   }
-]
+}
 
-const awardStats = [
-  {
-    count: '10+',
-    label: 'Awards',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nisi sit amet ultrices tempor, odio magna tempus libero, iris er'
+const swiperConfig: SwiperProps = {
+  modules: [Autoplay],
+  spaceBetween: 10,
+  slidesPerView: 1.2,
+  loop: true,
+  navigation: false,
+  autoplay: {
+    delay: 1400,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
-  {
-    count: '15+',
-    label: 'Awards',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nisi sit amet ultrices tempor, odio magna tempus libero, iris er'
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2.2,
+    },
+    1024: {
+      slidesPerView: 3.2,
+    },
+    1280: {
+      slidesPerView: 4.8,
+    },
   },
-  {
-    count: '20+',
-    label: 'Awards',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nisi sit amet ultrices tempor, odio magna tempus libero, iris er'
-  }
-]
-
-const AwardCard = ({ image, title, isActive }: { image: string; title: string; isActive: boolean }) => {
-  return (
-    <div className={`
-      group relative aspect-square overflow-hidden rounded-lg bg-black
-    `}>
-      <Image
-        src={image}
-        alt={title}
-        fill
-        className={`
-          object-cover transition-transform duration-300
-
-          group-hover:scale-105
-        `}
-      />
-      {/* Gradient overlay - Hiển thị khi hover trên desktop hoặc là slide active trên mobile */}
-      <div
-        className={`
-          absolute inset-0 bg-gradient-to-b from-transparent to-black/60
-          transition-opacity duration-300
-
-          md:opacity-0 md:group-hover:opacity-100
-
-          ${isActive ? 'opacity-100' : 'opacity-0'}
-        `}
-      />
-
-      {/* Title - Hiển thị khi hover trên desktop hoặc là slide active trên mobile */}
-      <div
-        className={`
-          absolute inset-x-0 bottom-0 p-6 transition-transform duration-300
-
-          md:translate-y-full md:group-hover:translate-y-0
-
-          ${isActive ? 'translate-y-0' : 'translate-y-full'}
-        `}
-      >
-        <h3 className="text-2xl font-bold tracking-wider text-white">
-          {title}
-        </h3>
-      </div>
-    </div>
-  )
 }
 
 const Awards = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [awards, setAwards] = useState<Award[]>([])
+  const [isLoading, setIsLoading] = useState(false)
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % awards.length)
-  }
+  useEffect(() => {
+    const fetchAwards = async () => {
+      setIsLoading(true)
+      const { data } = await supabase.from('awards').select('*')
+      setIsLoading(false)
+      setAwards(data as Award[])
+    }
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + awards.length) % awards.length)
-  }
+    fetchAwards()
+  }, [])
 
   return (
-    <section id={SECTION_IDS.AWARDS} className={`
-      px-10 py-20
+    <div
+      id={SECTION_IDS.AWARDS}
+      className={`
+        h-screen px-4 py-10
 
-      md:px-0
-    `}>
-      <div className="container">
-        {/* Header */}
-        <div className="mb-16 max-w-xl">
-          <p className="mb-4 text-lg text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <h2 className="text-4xl font-bold">AWARDS</h2>
-          <p className="mt-6 text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nisi sit amet ultrices tempor.
-          </p>
+        md:py-20
+      `}
+    >
+      {isLoading ?
+        <div className="flex h-96 items-center justify-center">
+          <Loader className="animate-spin" size={30} />
         </div>
+      : <div
+          className={`
+            grid grid-cols-1
 
-        {/* Awards Slider */}
-        <div className="relative mb-8">
-          <div className="flex overflow-hidden">
-            {awards.map((award, index) => (
-              <div
-                key={index}
-                className={`
-                  min-w-full px-1 transition-all duration-500
+            lg:grid-cols-3
 
-                  md:min-w-[25%]
-                `}
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
-                }}
-              >
-                <AwardCard
-                  image={award.image}
-                  title={award.title}
-                  isActive={index === currentIndex}
-                />
-              </div>
-            ))}
+            md:grid-cols-2
+
+            xl:grid-cols-4
+          `}
+        >
+          <div className="flex flex-col justify-center px-4">
+            <p
+              className={`
+                font-bebas-neue text-4xl font-medium
+
+                lg:text-8xl
+
+                md:text-6xl
+              `}
+            >
+              AWARDS
+            </p>
+            <p>
+              Our commitment to innovation and quality has brought Weminal
+              notable awards in the Web3 and technology community, including
+              over 10 competitions, both domestic and international with a total
+              prize value of over $60k.
+            </p>
           </div>
-        </div>
-
-        {/* Navigation */}
-        <div className="mt-8 flex items-center justify-center gap-4">
-          <button
-            onClick={prevSlide}
+          <Swiper
+            {...swiperConfig}
             className={`
-              flex size-12 items-center justify-center rounded-full border
-              border-border transition-colors
+              col-span-3 mt-4 size-full
 
-              hover:bg-accent
+              md:mt-8
             `}
           >
-            <ChevronLeft className="size-6" />
-          </button>
-
-          {/* Dots indicator */}
-          <div className="flex gap-2">
-            {awards.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`
-                  size-2 rounded-full transition-all
-
-                  ${currentIndex === index
-                  ? 'w-4 bg-primary'
-                  : `
-                    bg-border
-
-                    hover:bg-primary/50
-                  `
-                  }
-                `}
-              />
+            {awards.map((m) => (
+              <SwiperSlide key={m.id}>
+                <div className="h-full">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Necessitatibus, aperiam. Itaque autem facilis cupiditate
+                  similique quas, mollitia est deleniti quod veritatis rerum
+                  illo quis neque, ipsam vero quibusdam officia nisi.
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
-
-          <button
-            onClick={nextSlide}
-            className={`
-              flex size-12 items-center justify-center rounded-full border
-              border-border transition-colors
-
-              hover:bg-accent
-            `}
-          >
-            <ChevronRight className="size-6" />
-          </button>
+          </Swiper>
         </div>
-
-        {/* Stats */}
-        <div className={`
-          mt-20 grid gap-8 border-t border-border pt-20
-
-          md:grid-cols-3
-        `}>
-          {awardStats.map((stat, index) => (
-            <div key={index} className={`
-              ${index !== 0 ? `
-                border-border
-
-                md:border-l md:pl-8
-              ` : ''}
-            `}>
-              <div className="flex items-baseline gap-1">
-                <span className="text-6xl font-bold">{stat.count}</span>
-                <span className="text-2xl">{stat.label}</span>
-              </div>
-              <p className="mt-4 text-muted-foreground">
-                {stat.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      }
+    </div>
   )
 }
 

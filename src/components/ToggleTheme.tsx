@@ -24,9 +24,10 @@ const ToggleTheme = () => {
 
           hover:rotate-45
 
-          ${theme === 'dark'
-          ? 'bg-transparent ttext-white scale-90 font-bold opacity-70'
-          : 'scale-100 bg-yellow-400 text-yellow-950 opacity-100'
+          ${
+            theme === 'dark' ?
+              'bg-transparent ttext-white scale-90 font-bold opacity-70'
+            : 'scale-100 bg-yellow-400 text-yellow-950 opacity-100'
           }
         `}
       />
@@ -36,9 +37,10 @@ const ToggleTheme = () => {
 
           hover:rotate-12
 
-          ${theme === 'dark'
-          ? 'scale-100 bg-indigo-500 text-white opacity-100'
-          : 'scale-90 text-white opacity-70'
+          ${
+            theme === 'dark' ?
+              'scale-100 bg-indigo-500 text-white opacity-100'
+            : 'scale-90 text-white opacity-70'
           }
         `}
       />

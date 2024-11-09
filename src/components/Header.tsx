@@ -1,6 +1,6 @@
 'use client'
 import clsx from 'clsx'
-import { AnimatePresence,motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import {
   Award,
   Eye,
@@ -152,11 +152,13 @@ const Header = () => {
         )}
       >
         <nav className="container flex items-center justify-between font-medium">
-          <div className={`
-            hidden flex-1 items-center justify-between gap-8
+          <div
+            className={`
+              hidden flex-1 items-center justify-between gap-8
 
-            md:flex
-          `}>
+              md:flex
+            `}
+          >
             {headerItems.map((item) => (
               <button
                 key={item.title}
@@ -191,13 +193,15 @@ const Header = () => {
               </button>
             ))}
 
-            <div className={`
+            {/* <div
+              className={`
               hidden items-center gap-2
 
               md:flex
-            `}>
+            `}
+            >
               <ToggleTheme />
-            </div>
+            </div> */}
           </div>
 
           <button
@@ -240,10 +244,12 @@ const Header = () => {
               `}
             >
               <div className="flex h-full flex-col p-6">
-                <div className={`
-                  mb-8 flex items-center justify-between border-b border-border
-                  pb-4
-                `}>
+                <div
+                  className={`
+                    mb-8 flex items-center justify-between border-b
+                    border-border pb-4
+                  `}
+                >
                   <div className="flex items-center gap-2">
                     <Image
                       src="/logo/logo.png"

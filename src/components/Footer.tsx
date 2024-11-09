@@ -106,43 +106,8 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Navigation */}
-        <div
-          className={`
-            mt-12 grid grid-cols-2 gap-8
-
-            lg:grid-cols-5
-
-            md:grid-cols-3
-          `}
-        >
-          {footerItems.map((item) => (
-            <div key={item.title} className="flex flex-col items-center">
-              <button
-                onClick={() => handleScrollToSection(item.path)}
-                className={`
-                  group flex flex-col items-center gap-2 transition-colors
-
-                  hover:text-primary
-                `}
-              >
-                <span
-                  className={`
-                    rounded-lg bg-accent p-3 transition-colors
-
-                    group-hover:bg-primary/10
-                  `}
-                >
-                  {item.icon}
-                </span>
-                <span className="text-sm font-medium">{item.title}</span>
-              </button>
-            </div>
-          ))}
-        </div>
-
         {/* Social Links */}
-        <div className="mt-12 flex justify-center gap-6">
+        <div className="my-5 flex justify-center gap-6">
           {socialLinks.map((social) => (
             <a
               key={social.name}

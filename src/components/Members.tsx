@@ -12,6 +12,8 @@ import { Card } from '@/components/ui/focus-cards'
 import { SECTION_IDS } from '@/constants'
 import { supabase } from '@/lib/supabase/client'
 
+import { AnimatedTestimonials } from './ui/animated-testimonials'
+
 const swiperConfig: SwiperProps = {
   modules: [Autoplay],
   spaceBetween: 2,
@@ -41,6 +43,7 @@ export interface Member {
   id: string
   bio: string
   email: string
+  img: string
   links: {
     name: string
     value: string
@@ -66,68 +69,97 @@ const Members = () => {
     fetchMembers()
   }, [])
 
+  // return (
+  //   <div
+  //     id={SECTION_IDS.OUR_TEAM}
+  //     className={`
+  //       my-10
+
+  //       lg:my-48
+
+  //       md:my-16
+  //     `}
+  //   >
+  //     <h2
+  //       className={`
+  //         text-center font-bebas-neue text-4xl uppercase
+
+  //         lg:text-6xl
+
+  //         md:text-5xl
+
+  //         xl:text-8xl
+  //       `}
+  //     >
+  //       our DEDICATED team
+  //     </h2>
+  //     {/* <p className="mx-auto my-10 max-w-xl text-center font-pp-neue-montreal">
+  //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet,
+  //       nisi sit amet ultrices tempor, odio magna tempus libero, in volutpat
+  //       odio turpis sit amet urna. Integer a ex nec risus scelerisque dapibus.
+  //       Nam cursus metus vel lorem varius, a iaculis ligula sodales.
+  //     </p> */}
+
+  //     {isLoading ?
+  //       <div className="flex h-96 items-center justify-center">
+  //         <Loader className="animate-spin" size={30} />
+  //       </div>
+  //     : <Swiper
+  //         {...swiperConfig}
+  //         className={`
+  //           mt-4
+
+  //           md:mt-8
+  //         `}
+  //       >
+  //         {members.map((m, _index) => (
+  //           <SwiperSlide key={m.id}>
+  //             <Link href={`/members/${m.id}`} className="relative">
+  //               <Card
+  //                 key={m.id}
+  //                 card={{
+  //                   src: m.img,
+  //                   title: m.name,
+  //                 }}
+  //                 role={m.role}
+  //                 index={_index}
+  //                 hovered={hovered}
+  //                 setHovered={setHovered}
+  //               />
+  //             </Link>
+  //           </SwiperSlide>
+  //         ))}
+  //       </Swiper>
+  //     }
+  //   </div>
+  // )
+
   return (
-    <div
-      id={SECTION_IDS.OUR_TEAM}
-      className={`
-        my-10
+    <div className="flex h-screen items-center">
+      <div className="container grid grid-cols-4 gap-10">
+        <div className="flex items-center justify-center">
+          <div>
+            <p
+              className={`
+                font-bebas-neue text-4xl font-semibold
 
-        lg:my-20
-
-        md:my-16
-      `}
-    >
-      <h2
-        className={`
-          text-center font-bebas-neue text-4xl uppercase
-
-          lg:text-6xl
-
-          md:text-5xl
-
-          xl:text-8xl
-        `}
-      >
-        our DEDICATED team
-      </h2>
-      <p className="mx-auto my-10 max-w-xl text-center font-pp-neue-montreal">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet,
-        nisi sit amet ultrices tempor, odio magna tempus libero, in volutpat
-        odio turpis sit amet urna. Integer a ex nec risus scelerisque dapibus.
-        Nam cursus metus vel lorem varius, a iaculis ligula sodales.
-      </p>
-
-      {isLoading ?
-        <div className="flex h-96 items-center justify-center">
-          <Loader className="animate-spin" size={30} />
+                xl:text-8xl
+              `}
+            >
+              OUR MEMBERS
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              voluptatibus corporis distinctio dolorem sunt illum, et
+              recusandae! Quasi, quidem. Cum culpa temporibus iure, voluptate
+              excepturi nemo ex suscipit voluptatibus. Consequuntur!
+            </p>
+          </div>
         </div>
-      : <Swiper
-          {...swiperConfig}
-          className={`
-            mt-4
-
-            md:mt-8
-          `}
-        >
-          {members.map((m, _index) => (
-            <SwiperSlide key={m.id}>
-              <Link href={`/members/${m.id}`} className="relative">
-                <Card
-                  key={m.id}
-                  card={{
-                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdBWB76EZKUgHdARYa-XNyIzoiJiUiyKiFrg&s',
-                    title: m.name,
-                  }}
-                  role={m.role}
-                  index={_index}
-                  hovered={hovered}
-                  setHovered={setHovered}
-                />
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      }
+        <div className="col-span-3">
+          <AnimatedTestimonials testimonials={members} />
+        </div>
+      </div>
     </div>
   )
 }

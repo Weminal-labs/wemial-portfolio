@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       container: {
         center: true,
+        padding: '2rem',
       },
       fontFamily: {
         'bebas-neue': ['var(--font-bebas-neue)', 'sans-serif'],

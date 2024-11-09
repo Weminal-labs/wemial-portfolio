@@ -116,7 +116,7 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                   {/* Profile Section */}
                   <div className="flex flex-col items-start">
                     <img
-                      src="/avatar/avatar.png"
+                      src={member.img}
                       alt="Profile"
                       className={`
                         w-full

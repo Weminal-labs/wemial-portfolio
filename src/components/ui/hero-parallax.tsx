@@ -59,8 +59,7 @@ export const HeroParallax = ({
     <div
       ref={ref}
       className={`
-        relative flex h-[300vh] flex-col self-auto overflow-hidden py-0
-        antialiased
+        relative flex flex-col self-auto overflow-hidden py-0 antialiased
 
         [perspective:1000px]
 
@@ -77,9 +76,7 @@ export const HeroParallax = ({
         }}
       >
         <motion.div
-          className={`
-          mb-20 flex flex-row-reverse space-x-20 space-x-reverse
-        `}
+          className={`mb-20 flex flex-row-reverse space-x-20 space-x-reverse`}
         >
           {firstRow.map((product) => (
             <ProductCard
@@ -116,35 +113,31 @@ export const Header = () => {
   return (
     <div
       className={`
-      relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20
+        relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20
 
-      md:py-40
-    `}
+        md:py-40
+      `}
     >
       <h2
         className={`
-        font-bebas-neue text-3xl font-bold
+          font-bebas-neue text-3xl font-bold
 
-        dark:text-white
-
-        md:text-8xl
-      `}
+          md:text-7xl
+        `}
       >
         our projects
       </h2>
       <p
         className={`
-        mt-8 max-w-2xl font-pp-neue-montreal text-base
+          mt-4 max-w-2xl font-pp-neue-montreal text-base
 
-        dark:text-neutral-200
-
-        md:text-xl
-      `}
+          md:text-xl
+        `}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ab
-        similique cum eos iure inventore incidunt iste repudiandae ratione
-        aperiam voluptates sed ullam provident beatae, laudantium distinctio
-        itaque vitae doloremque.
+        At Weminal, we work on projects that include both useful applications
+        and new ideas in the Web3 space. Every project goes through careful
+        testing and improvement to make sure we meet real user needs and explore
+        new possibilities.
       </p>
     </div>
   )
@@ -175,7 +168,7 @@ export const ProductCard = ({
       <Link
         href={product.link}
         className={`
-          block
+          block overflow-hidden rounded-lg
 
           group-hover/product:shadow-2xl
         `}
@@ -192,17 +185,18 @@ export const ProductCard = ({
       </Link>
       <div
         className={`
-        pointer-events-none absolute inset-0 size-full bg-black opacity-0
+          pointer-events-none absolute inset-0 size-full rounded-lg bg-black
+          opacity-0
 
-        group-hover/product:opacity-80
-      `}
+          group-hover/product:opacity-50
+        `}
       ></div>
       <h2
         className={`
-        absolute bottom-4 left-4 text-white opacity-0
+          absolute bottom-4 left-4 text-white opacity-0
 
-        group-hover/product:opacity-100
-      `}
+          group-hover/product:opacity-100
+        `}
       >
         {product.title}
       </h2>
