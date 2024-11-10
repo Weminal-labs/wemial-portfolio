@@ -62,7 +62,7 @@ const Awards = () => {
     <div
       id={SECTION_IDS.AWARDS}
       className={`
-        h-screen px-4 py-10
+        px-4 py-10
 
         md:py-20
       `}
