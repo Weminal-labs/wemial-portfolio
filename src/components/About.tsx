@@ -12,10 +12,10 @@ const About = () => {
     >
       <div
         className={`
-        col-span-1 hidden h-full
+          col-span-1 hidden h-full
 
-        md:block
-      `}
+          md:block
+        `}
       >
         <div
           style={{ height: 'calc(100% - calc(0.25rem * 40))' }}
@@ -24,10 +24,10 @@ const About = () => {
       </div>
       <div
         className={`
-        col-span-3 flex h-full items-center justify-center border-x py-20
+          col-span-3 flex h-full items-center justify-center border-x py-20
 
-        md:col-span-1
-      `}
+          md:col-span-1
+        `}
       >
         <div
           className={`
@@ -47,10 +47,10 @@ const About = () => {
       </div>
       <div
         className={`
-        col-span-1 hidden h-full
+          col-span-1 hidden h-full
 
-        md:block
-      `}
+          md:block
+        `}
       >
         <div
           style={{ height: 'calc(100% - calc(0.25rem * 40))' }}

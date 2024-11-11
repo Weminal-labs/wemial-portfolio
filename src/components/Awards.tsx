@@ -1,6 +1,7 @@
 'use client'
 
 import { Loader } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, type SwiperProps, SwiperSlide } from 'swiper/react'
@@ -104,18 +105,21 @@ const Awards = () => {
           <Swiper
             {...swiperConfig}
             className={`
-              col-span-3 mt-4 size-full
+              col-span-3 mt-4 size-full h-48
 
               md:mt-8
             `}
           >
             {awards.map((m) => (
               <SwiperSlide key={m.id}>
-                <div className="h-full">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus, aperiam. Itaque autem facilis cupiditate
-                  similique quas, mollitia est deleniti quod veritatis rerum
-                  illo quis neque, ipsam vero quibusdam officia nisi.
+                <div className="relative size-full overflow-hidden rounded-lg">
+                  <Image
+                    src={m.img}
+                    alt=""
+                    sizes="auto"
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
               </SwiperSlide>
             ))}

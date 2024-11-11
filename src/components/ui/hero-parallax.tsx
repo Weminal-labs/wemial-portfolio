@@ -20,9 +20,9 @@ export const HeroParallax = ({
     thumbnail: string
   }[]
 }) => {
-  const firstRow = products.slice(0, 5)
-  const secondRow = products.slice(5, 10)
-  const thirdRow = products.slice(10, 15)
+  const firstRow = products.slice(0, 4)
+  const secondRow = products.slice(5, 11)
+  const thirdRow = products.slice(12, 20)
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -165,8 +165,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product relative h-96 w-[30rem] shrink-0"
     >
-      <Link
-        href={product.link}
+      <div
         className={`
           block overflow-hidden rounded-lg
 
@@ -182,7 +181,7 @@ export const ProductCard = ({
           `}
           alt={product.title}
         />
-      </Link>
+      </div>
       <div
         className={`
           pointer-events-none absolute inset-0 size-full rounded-lg bg-black
