@@ -19,7 +19,7 @@ const swiperConfig: SwiperProps = {
   loop: true,
   navigation: false,
   autoplay: {
-    delay: 0,
+    delay: 1200,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
