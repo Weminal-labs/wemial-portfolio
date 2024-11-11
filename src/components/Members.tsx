@@ -91,12 +91,6 @@ const Members = () => {
       >
         our DEDICATED team
       </h2>
-      {/* <p className="mx-auto my-10 max-w-xl text-center font-pp-neue-montreal">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet,
-        nisi sit amet ultrices tempor, odio magna tempus libero, in volutpat
-        odio turpis sit amet urna. Integer a ex nec risus scelerisque dapibus.
-        Nam cursus metus vel lorem varius, a iaculis ligula sodales.
-      </p> */}
 
       {isLoading ?
         <div className="flex h-96 items-center justify-center">
@@ -112,7 +106,7 @@ const Members = () => {
         >
           {members.map((m, _index) => (
             <SwiperSlide key={m.id}>
-              <Link href={`/members/${m.id}`} className="relative">
+              <div className="relative">
                 <Card
                   key={m.id}
                   card={{
@@ -124,7 +118,7 @@ const Members = () => {
                   hovered={hovered}
                   setHovered={setHovered}
                 />
-              </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

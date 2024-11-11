@@ -70,6 +70,9 @@ export default function RootLayout({
       )}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="icon" href="/logo/logo.png" sizes="any" />
+      </head>
       <body className="main-container">
         <ThemeProvider
           attribute="class"
