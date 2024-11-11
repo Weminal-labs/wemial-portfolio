@@ -1,11 +1,13 @@
 'use client'
+import { Loader } from 'lucide-react'
 import React, { useEffect } from 'react'
 
-import { HeroParallax } from '@/components/ui/hero-parallax'
 import { SECTION_IDS } from '@/constants'
 import { supabase } from '@/lib/supabase/client'
 
-interface Project {
+import { ParallaxScroll } from './ui/parallax-scroll'
+
+export interface Project {
   title: string
   link: string
   thumbnail: string
@@ -26,8 +28,35 @@ const Projects = () => {
     fetchProjects()
   }, [])
   return (
-    <div id={SECTION_IDS.PROJECTS}>
-      <HeroParallax products={projects} />
+    <div
+      id={SECTION_IDS.PROJECTS}
+      className={`
+        py-10
+
+        lg:py-40
+
+        md:py-20
+      `}
+    >
+      <h2
+        className={`
+          py-10 text-center font-bebas-neue text-4xl font-medium
+
+          lg:text-8xl
+
+          md:py-20 md:text-6xl
+        `}
+      >
+        our projects
+      </h2>
+      {isLoading ?
+        <div className="flex h-96 items-center justify-center">
+          <Loader className="animate-spin" size={30} />
+        </div>
+      : <div className="mx-auto max-w-7xl">
+          <ParallaxScroll projects={projects} />
+        </div>
+      }
     </div>
   )
 }

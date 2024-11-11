@@ -12,8 +12,6 @@ import { Card } from '@/components/ui/focus-cards'
 import { SECTION_IDS } from '@/constants'
 import { supabase } from '@/lib/supabase/client'
 
-import { AnimatedTestimonials } from './ui/animated-testimonials'
-
 const swiperConfig: SwiperProps = {
   modules: [Autoplay],
   spaceBetween: 2,
@@ -21,11 +19,10 @@ const swiperConfig: SwiperProps = {
   loop: true,
   navigation: false,
   autoplay: {
-    delay: 1400,
+    delay: 0,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-
   breakpoints: {
     768: {
       slidesPerView: 2.2,

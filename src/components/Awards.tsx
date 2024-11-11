@@ -83,7 +83,15 @@ const Awards = () => {
             xl:grid-cols-4
           `}
         >
-          <div className="flex flex-col justify-center px-4">
+          <div
+            className={`
+              flex flex-col justify-center px-4
+
+              md:col-span-2
+
+              xl:col-span-1
+            `}
+          >
             <p
               className={`
                 font-bebas-neue text-4xl font-medium
@@ -95,7 +103,7 @@ const Awards = () => {
             >
               AWARDS
             </p>
-            <p>
+            <p className="pr-10">
               Our commitment to innovation and quality has brought Weminal
               notable awards in the Web3 and technology community, including
               over 10 competitions, both domestic and international with a total
