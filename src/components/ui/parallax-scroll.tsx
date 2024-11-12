@@ -52,17 +52,22 @@ export const ParallaxScroll = ({
         `}
       >
         {projects.map((el, idx) => (
-          <div key={idx} className="relative h-80 w-full">
-            <Image
-              src={el.thumbnail}
-              className={`
-                !m-0 h-80 w-full gap-10 rounded-lg object-cover object-left-top
-                !p-0
-              `}
-              height="400"
-              width="400"
-              alt="thumbnail"
-            />
+          <div key={idx}>
+            <div className="relative h-80 w-full">
+              <Image
+                src={el.thumbnail}
+                className={`
+                  !m-0 h-80 w-full gap-10 rounded-lg object-cover
+                  object-left-top !p-0
+                `}
+                height="400"
+                width="400"
+                alt="thumbnail"
+              />
+            </div>
+            <p className="my-3 text-center font-bebas-neue text-3xl">
+              {el.title}
+            </p>
           </div>
         ))}
       </div>
@@ -89,6 +94,9 @@ export const ParallaxScroll = ({
                 width="400"
                 alt="thumbnail"
               />
+              <p className="my-3 text-center font-bebas-neue text-3xl">
+                {el.title}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -105,6 +113,9 @@ export const ParallaxScroll = ({
                 width="400"
                 alt="thumbnail"
               />
+              <p className="my-3 text-center font-bebas-neue text-3xl">
+                {el.title}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -121,6 +132,9 @@ export const ParallaxScroll = ({
                 width="400"
                 alt="thumbnail"
               />
+              <p className="my-3 text-center font-bebas-neue text-3xl">
+                {el.title}
+              </p>
             </motion.div>
           ))}
         </div>
