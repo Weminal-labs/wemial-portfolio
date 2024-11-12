@@ -62,7 +62,7 @@ export const ParallaxScroll = ({
                   relative size-auto border-black/[0.1] bg-gray-50 group/card
                   rounded-xl border p-6
 
-                  dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
+                  dark:border-white/[0.2] dark:bg-black/5 dark:hover:shadow-2xl
                   dark:hover:shadow-emerald-500/[0.1]
                 `}
               >
@@ -128,8 +128,8 @@ export const ParallaxScroll = ({
                     relative size-auto border-black/[0.1] bg-gray-50 group/card
                     rounded-xl border p-6
 
-                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
-                    dark:hover:shadow-emerald-500/[0.1]
+                    dark:border-white/[0.2] dark:bg-black/5
+                    dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]
                   `}
                 >
                   <CardItem
@@ -146,7 +146,7 @@ export const ParallaxScroll = ({
                     as="p"
                     translateZ="60"
                     className={`
-                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+                      mt-2 line-clamp-2 max-w-sm text-sm text-neutral-500
 
                       dark:text-neutral-300
                     `}
@@ -195,8 +195,8 @@ export const ParallaxScroll = ({
                     relative size-auto border-black/[0.1] bg-gray-50 group/card
                     rounded-xl border p-6
 
-                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
-                    dark:hover:shadow-emerald-500/[0.1]
+                    dark:border-white/[0.2] dark:bg-black/5
+                    dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]
                   `}
                 >
                   <CardItem
@@ -213,7 +213,7 @@ export const ParallaxScroll = ({
                     as="p"
                     translateZ="60"
                     className={`
-                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+                      mt-2 line-clamp-2 max-w-sm text-sm text-neutral-500
 
                       dark:text-neutral-300
                     `}
@@ -262,8 +262,8 @@ export const ParallaxScroll = ({
                     relative size-auto border-black/[0.1] bg-gray-50 group/card
                     rounded-xl border p-6
 
-                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
-                    dark:hover:shadow-emerald-500/[0.1]
+                    dark:border-white/[0.2] dark:bg-black/5
+                    dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]
                   `}
                 >
                   <CardItem
@@ -280,7 +280,7 @@ export const ParallaxScroll = ({
                     as="p"
                     translateZ="60"
                     className={`
-                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+                      mt-2 line-clamp-2 max-w-sm text-sm text-neutral-500
 
                       dark:text-neutral-300
                     `}
