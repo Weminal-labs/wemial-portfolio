@@ -9,6 +9,8 @@ import { Swiper, type SwiperProps, SwiperSlide } from 'swiper/react'
 import { SECTION_IDS } from '@/constants'
 import { supabase } from '@/lib/supabase/client'
 
+import { Card } from './ui/focus-cards'
+
 interface Award {
   id: string
   name: string
@@ -20,7 +22,7 @@ interface Award {
 }
 
 const swiperConfig: SwiperProps = {
-  modules: [Autoplay],
+  // modules: [Autoplay],
   spaceBetween: 10,
   slidesPerView: 1.2,
   loop: true,
@@ -39,7 +41,7 @@ const swiperConfig: SwiperProps = {
       slidesPerView: 3.2,
     },
     1280: {
-      slidesPerView: 4.8,
+      slidesPerView: 3.8,
     },
   },
 }
@@ -47,6 +49,7 @@ const swiperConfig: SwiperProps = {
 const Awards = () => {
   const [awards, setAwards] = useState<Award[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [hovered, setHovered] = useState<number | null>(null)
 
   useEffect(() => {
     const fetchAwards = async () => {
@@ -113,22 +116,24 @@ const Awards = () => {
           <Swiper
             {...swiperConfig}
             className={`
-              col-span-3 mt-4 size-full h-48
+              col-span-3 mt-4 size-full
 
               md:mt-8
             `}
           >
-            {awards.map((m) => (
+            {awards.map((m, index) => (
               <SwiperSlide key={m.id}>
-                <div className="relative size-full overflow-hidden rounded-lg">
-                  <Image
-                    src={m.img}
-                    alt=""
-                    sizes="auto"
-                    fill
-                    className="object-cover object-center"
-                  />
-                </div>
+                <Card
+                  role={m.name}
+                  key={m.id}
+                  card={{
+                    title: m.achievements.Project,
+                    src: m.img,
+                  }}
+                  index={index}
+                  hovered={hovered}
+                  setHovered={setHovered}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

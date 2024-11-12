@@ -31,7 +31,7 @@ const swiperConfig: SwiperProps = {
       slidesPerView: 3.2,
     },
     1280: {
-      slidesPerView: 4.8,
+      slidesPerView: 4.2,
     },
   },
 }

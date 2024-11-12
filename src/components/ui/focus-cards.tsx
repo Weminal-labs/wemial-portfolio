@@ -57,7 +57,7 @@ export const Card = React.memo(
               bg-gradient-to-b from-neutral-50 to-neutral-200 bg-clip-text
               font-bebas-neue text-xl font-medium text-transparent
 
-              md:text-3xl
+              md:text-6xl
             `}
           >
             {card.title}
@@ -66,6 +66,8 @@ export const Card = React.memo(
             className={`
               bg-gradient-to-b from-neutral-50 to-neutral-200 bg-clip-text
               font-bebas-neue text-lg text-transparent
+
+              md:text-3xl
             `}
           >
             {role}
