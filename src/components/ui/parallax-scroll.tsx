@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 
 import { type Project } from '../Projects'
+import { CardBody, CardContainer, CardItem } from './3d-card'
 
 export const ParallaxScroll = ({
   projects,
@@ -53,21 +56,56 @@ export const ParallaxScroll = ({
       >
         {projects.map((el, idx) => (
           <div key={idx}>
-            <div className="relative h-80 w-full">
-              <Image
-                src={el.thumbnail}
+            <CardContainer className="inter-var">
+              <CardBody
                 className={`
-                  !m-0 h-80 w-full gap-10 rounded-lg object-cover
-                  object-left-top !p-0
+                  relative size-auto border-black/[0.1] bg-gray-50 group/card
+                  rounded-xl border p-6
+
+                  dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
+                  dark:hover:shadow-emerald-500/[0.1]
                 `}
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-            </div>
-            <p className="my-3 text-center font-bebas-neue text-3xl">
-              {el.title}
-            </p>
+              >
+                <CardItem
+                  translateZ="50"
+                  className={`
+                    font-bebas-neue text-xl font-bold text-neutral-600
+
+                    dark:text-white
+                  `}
+                >
+                  {el.title}
+                </CardItem>
+                <CardItem translateZ="100" className="mt-4 w-full">
+                  <Image
+                    src={el.thumbnail}
+                    height="1000"
+                    width="1000"
+                    className={`
+                      h-60 w-full rounded-xl object-cover
+
+                      group-hover/card:shadow-xl
+                    `}
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                <div className="mt-6 flex items-center justify-between">
+                  <CardItem
+                    translateZ={20}
+                    as={Link}
+                    href={`/projects/${el.id}`}
+                    target="__blank"
+                    className={`
+                      rounded-xl px-4 py-2 text-xs font-normal
+
+                      dark:text-white
+                    `}
+                  >
+                    View more →
+                  </CardItem>
+                </div>
+              </CardBody>
+            </CardContainer>
           </div>
         ))}
       </div>
@@ -84,57 +122,201 @@ export const ParallaxScroll = ({
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
             <motion.div style={{ y: translateFirst }} key={'grid-1' + idx}>
-              <Image
-                src={el.thumbnail}
-                className={`
-                  !m-0 h-80 w-full gap-10 rounded-lg object-cover
-                  object-left-top !p-0
-                `}
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-              <p className="my-3 text-center font-bebas-neue text-3xl">
-                {el.title}
-              </p>
+              <CardContainer className="inter-var">
+                <CardBody
+                  className={`
+                    relative size-auto border-black/[0.1] bg-gray-50 group/card
+                    rounded-xl border p-6
+
+                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
+                    dark:hover:shadow-emerald-500/[0.1]
+                  `}
+                >
+                  <CardItem
+                    translateZ="50"
+                    className={`
+                      font-bebas-neue text-xl font-bold text-neutral-600
+
+                      dark:text-white
+                    `}
+                  >
+                    {el.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className={`
+                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+
+                      dark:text-neutral-300
+                    `}
+                  >
+                    {el.description}
+                  </CardItem>
+                  <CardItem translateZ="100" className="mt-4 w-full">
+                    <Image
+                      src={el.thumbnail}
+                      height="1000"
+                      width="1000"
+                      className={`
+                        h-60 w-full rounded-xl object-cover
+
+                        group-hover/card:shadow-xl
+                      `}
+                      alt="thumbnail"
+                    />
+                  </CardItem>
+                  <div className="mt-6 flex items-center justify-between">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href={`/projects/${el.id}`}
+                      target="__blank"
+                      className={`
+                        rounded-xl px-4 py-2 text-xs font-normal
+
+                        dark:text-white
+                      `}
+                    >
+                      View more →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </CardContainer>
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={'grid-2' + idx}>
-              <Image
-                src={el.thumbnail}
-                className={`
-                  !m-0 h-80 w-full gap-10 rounded-lg object-cover
-                  object-left-top !p-0
-                `}
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-              <p className="my-3 text-center font-bebas-neue text-3xl">
-                {el.title}
-              </p>
+              <CardContainer className="inter-var">
+                <CardBody
+                  className={`
+                    relative size-auto border-black/[0.1] bg-gray-50 group/card
+                    rounded-xl border p-6
+
+                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
+                    dark:hover:shadow-emerald-500/[0.1]
+                  `}
+                >
+                  <CardItem
+                    translateZ="50"
+                    className={`
+                      font-bebas-neue text-xl font-bold text-neutral-600
+
+                      dark:text-white
+                    `}
+                  >
+                    {el.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className={`
+                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+
+                      dark:text-neutral-300
+                    `}
+                  >
+                    {el.description}
+                  </CardItem>
+                  <CardItem translateZ="100" className="mt-4 w-full">
+                    <Image
+                      src={el.thumbnail}
+                      height="1000"
+                      width="1000"
+                      className={`
+                        h-60 w-full rounded-xl object-cover
+
+                        group-hover/card:shadow-xl
+                      `}
+                      alt="thumbnail"
+                    />
+                  </CardItem>
+                  <div className="mt-6 flex items-center justify-between">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href={`/projects/${el.id}`}
+                      target="__blank"
+                      className={`
+                        rounded-xl px-4 py-2 text-xs font-normal
+
+                        dark:text-white
+                      `}
+                    >
+                      View more →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </CardContainer>
             </motion.div>
           ))}
         </div>
         <div className="grid gap-10">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={'grid-3' + idx}>
-              <Image
-                src={el.thumbnail}
-                className={`
-                  !m-0 h-80 w-full gap-10 rounded-lg object-cover
-                  object-left-top !p-0
-                `}
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-              <p className="my-3 text-center font-bebas-neue text-3xl">
-                {el.title}
-              </p>
+              <CardContainer className="inter-var">
+                <CardBody
+                  className={`
+                    relative size-auto border-black/[0.1] bg-gray-50 group/card
+                    rounded-xl border p-6
+
+                    dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl
+                    dark:hover:shadow-emerald-500/[0.1]
+                  `}
+                >
+                  <CardItem
+                    translateZ="50"
+                    className={`
+                      font-bebas-neue text-xl font-bold text-neutral-600
+
+                      dark:text-white
+                    `}
+                  >
+                    {el.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className={`
+                      mt-2 line-clamp-3 max-w-sm text-sm text-neutral-500
+
+                      dark:text-neutral-300
+                    `}
+                  >
+                    {el.description}
+                  </CardItem>
+                  <CardItem translateZ="100" className="mt-4 w-full">
+                    <Image
+                      src={el.thumbnail}
+                      height="1000"
+                      width="1000"
+                      className={`
+                        h-60 w-full rounded-xl object-cover
+
+                        group-hover/card:shadow-xl
+                      `}
+                      alt="thumbnail"
+                    />
+                  </CardItem>
+                  <div className="mt-6 flex items-center justify-between">
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href={`/projects/${el.id}`}
+                      target="__blank"
+                      className={`
+                        rounded-xl px-4 py-2 text-xs font-normal
+
+                        dark:text-white
+                      `}
+                    >
+                      View more →
+                    </CardItem>
+                  </div>
+                </CardBody>
+              </CardContainer>
             </motion.div>
           ))}
         </div>

@@ -8,9 +8,11 @@ import { supabase } from '@/lib/supabase/client'
 import { ParallaxScroll } from './ui/parallax-scroll'
 
 export interface Project {
+  id: string
   title: string
   link: string
   thumbnail: string
+  description: string
 }
 
 const Projects = () => {
@@ -32,8 +34,6 @@ const Projects = () => {
       id={SECTION_IDS.PROJECTS}
       className={`
         py-10
-
-        lg:py-40
 
         md:py-20
       `}
