@@ -22,7 +22,7 @@ interface Award {
 }
 
 const swiperConfig: SwiperProps = {
-  // modules: [Autoplay],
+  modules: [Autoplay],
   spaceBetween: 10,
   slidesPerView: 1.2,
   loop: true,
