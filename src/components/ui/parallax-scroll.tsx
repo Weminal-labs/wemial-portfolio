@@ -39,7 +39,7 @@ export const ParallaxScroll = ({
         `
           h-auto w-full items-start overflow-y-auto
 
-          lg:h-[80vh]
+          lg:h-[90vh]
         `,
         className,
       )}
