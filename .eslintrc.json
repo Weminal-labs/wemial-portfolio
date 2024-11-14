@@ -34,6 +34,7 @@
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
         "tailwindcss/classnames-order": 0,
+        "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/consistent-type-imports": [
           "error",
           {
