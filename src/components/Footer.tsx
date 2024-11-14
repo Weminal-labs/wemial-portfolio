@@ -39,22 +39,17 @@ const socialLinks = [
   {
     name: 'Twitter',
     icon: <FaTwitter className="size-5" />,
-    href: 'https://twitter.com',
+    href: 'https://x.com/WeminalHack',
   },
   {
     name: 'Github',
     icon: <FaGithub className="size-5" />,
-    href: 'https://github.com',
-  },
-  {
-    name: 'LinkedIn',
-    icon: <FaLinkedin className="size-5" />,
-    href: 'https://linkedin.com',
+    href: 'https://github.com/Weminal-labs',
   },
   {
     name: 'Facebook',
     icon: <FaFacebook className="size-5" />,
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/groups/weminalhack',
   },
 ]
 
