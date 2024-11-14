@@ -4,6 +4,7 @@ import 'swiper/css/navigation'
 
 import { Loader } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, type SwiperProps, SwiperSlide } from 'swiper/react'
@@ -55,6 +56,8 @@ const Members = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [hovered, setHovered] = useState<number | null>(null)
 
+  const router = useRouter()
+
   useEffect(() => {
     const fetchMembers = async () => {
       setIsLoading(true)
@@ -103,7 +106,12 @@ const Members = () => {
         >
           {members.map((m, _index) => (
             <SwiperSlide key={m.id}>
-              <div className="relative">
+              <div
+                className="relative cursor-pointer"
+                onClick={() => {
+                  router.push(`/members/${m.id}`)
+                }}
+              >
                 <Card
                   key={m.id}
                   card={{

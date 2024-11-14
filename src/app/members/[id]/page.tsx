@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { Loader } from 'lucide-react'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin, FaTelegram, FaTwitter } from 'react-icons/fa'
 import {
@@ -93,67 +95,79 @@ export default function Page({ params: { id } }: MemberDetailProps) {
 
             <div
               className={`
-                container mx-auto px-10 py-8
+                container h-full px-2 py-8
 
-                md:px-8 md:py-16
+                md:py-16
               `}
             >
               <div
                 className={`
-                  grid grid-cols-1 gap-8
+                  h-full grid-cols-1 gap-8
 
-                  md:grid-cols-12 md:gap-24
+                  lg:grid-cols-12
+
+                  md:grid md:gap-24
                 `}
               >
                 {/* Left Column */}
                 <div
                   className={`
-                    col-span-12 mx-4 space-y-6
+                    col-span-12 mx-4
 
-                    md:col-span-5 md:mx-0 md:space-y-[80px]
+                    md:col-span-5
                   `}
                 >
                   {/* Profile Section */}
                   <div className="flex flex-col items-start">
-                    <img
-                      src={member.img}
-                      alt="Profile"
+                    <div
                       className={`
-                        w-full
+                        relative mx-auto size-40
 
-                        dark:brightness-90
-
-                        md:w-[150px]
+                        md:mx-0 md:size-[150px]
                       `}
-                    />
+                    >
+                      <Image
+                        className="rounded-full object-cover"
+                        src={member.img}
+                        alt=""
+                        sizes="auto"
+                        fill
+                      />
+                    </div>
 
                     <div
                       className={`
-                        mb-40 mt-10 text-start
+                        mx-auto my-6 text-start
 
-                        md:mb-0 md:mt-4
+                        md:mx-0 md:mt-4
                       `}
                     >
                       <p
                         className={`
-                          mb-4 text-[26px] font-medium text-gray-600
+                          mb-4 text-center text-xl font-medium text-gray-600
 
                           dark:text-gray-400
 
-                          md:text-base md:font-normal
+                          md:text-left md:text-2xl md:font-normal
                         `}
                       >
                         {member.email}
                       </p>
                       <div
                         className={`
-                          flex justify-start gap-6 text-gray-600
+                          flex justify-center gap-6 text-gray-600
 
                           dark:text-gray-400
+
+                          md:justify-start
                         `}
                       >
                         <a
-                          href="#"
+                          href={
+                            member.links.find((link) => link.name === 'github')
+                              ?.value
+                          }
+                          target="_blank"
                           className={`
                             dark:hover:text-gray-200
 
@@ -163,7 +177,11 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                           <FaGithub size={24} />
                         </a>
                         <a
-                          href="#"
+                          href={
+                            member.links.find(
+                              (link) => link.name === 'linkedin',
+                            )?.value
+                          }
                           className={`
                             dark:hover:text-gray-200
 
@@ -173,7 +191,10 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                           <FaLinkedin size={24} />
                         </a>
                         <a
-                          href="#"
+                          href={
+                            member.links.find((link) => link.name === 'x')
+                              ?.value
+                          }
                           className={`
                             dark:hover:text-gray-200
 
@@ -183,7 +204,11 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                           <FaTwitter size={24} />
                         </a>
                         <a
-                          href="#"
+                          href={
+                            member.links.find(
+                              (link) => link.name === 'telegram',
+                            )?.value
+                          }
                           className={`
                             dark:hover:text-gray-200
 
@@ -201,7 +226,7 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                     className={`
                       space-y-12 text-left
 
-                      md:space-y-10
+                      md:space-y-14
                     `}
                   >
                     <h1
@@ -211,15 +236,33 @@ export default function Page({ params: { id } }: MemberDetailProps) {
 
                         dark:text-white
 
-                        md:text-5xl md:tracking-[-2px]
+                        md:text-3xl md:tracking-[-2px]
                       `}
                     >
-                      HI, I&apos;M <br /> {member.name}
+                      <span
+                        className={`
+                          hidden
+
+                          md:inline-block
+                        `}
+                      >
+                        HI, I&apos;M
+                      </span>
+                      <span
+                        className={`
+                          block w-full text-center
+
+                          md:ml-4 md:inline-block md:w-auto md:text-left
+                        `}
+                      >
+                        {member.name}
+                      </span>
                     </h1>
 
                     <p
                       className={`
-                        text-justify text-lg leading-relaxed text-gray-600
+                        m-0 !mt-5 text-justify text-lg leading-relaxed
+                        text-gray-600
 
                         dark:text-gray-400
 
@@ -234,9 +277,9 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                 {/* Right Column */}
                 <div
                   className={`
-                    col-span-12 mx-4 mt-8 flex flex-col justify-between
+                    col-span-12 mx-4 mt-8 flex flex-col
 
-                    md:col-span-7 md:mx-0 md:mt-0 md:justify-between
+                    md:col-span-7 md:mx-0 md:mt-0
                   `}
                 >
                   {/* Tech Stack Section */}
@@ -261,9 +304,11 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                     </h3>
                     <div
                       className={`
-                        my-6 flex flex-row flex-wrap justify-center gap-4
+                        my-6 flex flex-row flex-wrap justify-end gap-4
 
-                        md:flex-col md:items-end md:gap-6
+                        lg:flex-col lg:justify-center
+
+                        md:items-end md:gap-6
                       `}
                     >
                       <TechIcon icon={<SiNodedotjs size={24} />} />
@@ -278,12 +323,10 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                   {/* Developer Title */}
                   <h1
                     className={`
-                      order-1 my-[120%] scale-y-150 text-right text-3xl
-                      font-bold leading-tight tracking-[-2px] text-neutral-800
+                      mb-5 scale-y-150 text-center font-pp-neue-montreal
+                      text-3xl font-bold uppercase leading-tight tracking-[-2px]
 
-                      dark:text-white
-
-                      md:order-2 md:my-0 md:mt-4 md:text-5xl md:tracking-[-3px]
+                      md:text-right
                     `}
                   >
                     {member.role}
