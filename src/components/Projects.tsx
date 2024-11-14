@@ -13,6 +13,11 @@ export interface Project {
   link: string
   thumbnail: string
   description: string
+  members: {
+    name: string
+    role: string
+  }[]
+  techstack: string[]
 }
 
 const Projects = () => {

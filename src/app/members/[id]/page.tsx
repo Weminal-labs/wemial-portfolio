@@ -304,11 +304,11 @@ export default function Page({ params: { id } }: MemberDetailProps) {
                     </h3>
                     <div
                       className={`
-                        my-6 flex flex-row flex-wrap justify-end gap-4
+                        my-6 flex flex-row flex-wrap justify-center gap-4
 
-                        lg:flex-col lg:justify-center
+                        lg:flex-col
 
-                        md:items-end md:gap-6
+                        md:items-end md:justify-end md:gap-6
                       `}
                     >
                       <TechIcon icon={<SiNodedotjs size={24} />} />
