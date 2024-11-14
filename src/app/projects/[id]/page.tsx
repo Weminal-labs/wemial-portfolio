@@ -1,3 +1,4 @@
+"use client"
 import { Loader } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
